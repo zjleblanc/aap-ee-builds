@@ -15,4 +15,7 @@
     - name: Build EEs
       ansible.builtin.include_role:
         name: infra.ee_utilities.ee_builder
+        apply:
+          environment: 
+            PATH: "{{ ansible_env.PATH }}:/var/lib/awx/.local/bin"
 ...
