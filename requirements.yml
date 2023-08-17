@@ -1,3 +1,4 @@
 ---
 collections:
   - infra.ee_utilities
+  - containers.podman
