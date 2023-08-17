@@ -1,0 +1,9 @@
+---
+- name: Playbook to create custom EE
+  hosts: "{{ _host | default(ah_host) }}"
+  gather_facts: false
+  vars_files:
+    - vars/execution_environments.yml
+  roles:
+    - infra.ee_utilities.ee_builder
+...
