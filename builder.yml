@@ -4,6 +4,8 @@
   gather_facts: false
   vars_files:
     - vars/execution_environments.yml
-  roles:
-    - infra.ee_utilities.ee_builder
+  tasks:
+    - name: Build EEs
+      ansible.builtin.include_role:
+        name: infra.ee_utilities.ee_builder
 ...
