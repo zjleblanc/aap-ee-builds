@@ -5,6 +5,8 @@
   vars_files:
     - vars/execution_environments.yml
   tasks:
+    - debug:
+        var: ee_list
     - name: Build EEs
       ansible.builtin.include_role:
         name: infra.ee_utilities.ee_builder
