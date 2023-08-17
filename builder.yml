@@ -7,15 +7,7 @@
     - vars/execution_environments.yml
 
   tasks:
-    - name: Install ansible-builder
-      ansible.builtin.pip:
-        name: ansible-builder
-        state: present
-
     - name: Build EEs
       ansible.builtin.include_role:
         name: infra.ee_utilities.ee_builder
-        apply:
-          environment: 
-            PATH: "{{ ansible_env.PATH }}:/var/lib/awx/.local/bin"
 ...
